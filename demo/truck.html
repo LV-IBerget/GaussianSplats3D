@@ -39,9 +39,9 @@
         'initialCameraPosition': [0, 0.5, 0],
         'initialCameraLookAt': [1, 0.5, 0],
         'sphericalHarmonicsDegree': 2,
-        'webXRMode': GaussianSplats3D.WebXRMode.VR
+        'webXRMode': (mode ? GaussianSplats3D.WebXRMode.None : GaussianSplats3D.WebXRMode.VR) 
     });
-    let path = 'assets/data/splat/Crown-Point-Vista-Inverted' + (mode ? '_high' : '') + '.ply';
+    let path = 'assets/data/splat/Crown-Point-Vista-Inverted' + '.ply';
     viewer.addSplatScene(path, {
       'progressiveLoad': false
     })
