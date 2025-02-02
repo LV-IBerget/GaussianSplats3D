@@ -571,7 +571,8 @@
         'halfPrecisionCovariancesOnGPU': false,
         'antialiased': antialiased || false,
         'splatRenderMode': sceneIs2D ? GaussianSplats3D.SplatRenderMode.TwoD : GaussianSplats3D.SplatRenderMode.ThreeD,
-        'sphericalHarmonicsDegree': sphericalHarmonicsDegree
+        'sphericalHarmonicsDegree': sphericalHarmonicsDegree,
+        'webXRMode': GaussianSplats3D.WebXRMode.VR
       };
       const splatBufferOptions = {
         'splatAlphaRemovalThreshold': alphaRemovalThreshold
@@ -635,7 +636,7 @@
         </div>
         <div style="text-align:center;">
           <div class="content-row" style="max-width: 800px; margin:auto; display:flex; align-items: center; justify-content: center;">
-            <div class="demo-scene-panel">
+            <!--div class="demo-scene-panel">
                 <div class="small-title">Garden</div>
                 <img src="assets/images/garden.png" class="demo-scene-panel-image">
                 <div class="demo-scene-button-row">
@@ -643,17 +644,16 @@
                   <div style="width: 10px;"></div>
                   <div class="demo-scene-button" onclick="openDemo('garden', [['mode', '1']])">High</div>
                 </div>
-            </div>
+            </div-->
             <div class="demo-scene-panel">
-                <div class="small-title">Truck</div>
-                <img src="assets/images/truck.png" class="demo-scene-panel-image">
+                <div class="small-title">Room</div>
+                <img src="assets/images/Room.png" class="demo-scene-panel-image">
                 <div class="demo-scene-button-row">
-                  <div class="demo-scene-button" onclick="openDemo('truck', [['mode', '0']])">Low</div>
+                  <div class="demo-scene-button" onclick="openDemo('truck', [['mode', '0']])">VR</div>
                   <div style="width: 10px;"></div>
-                  <div class="demo-scene-button" onclick="openDemo('truck', [['mode', '1']])">High</div>
                 </div>
             </div>
-            <div class="demo-scene-panel">
+            <!--div class="demo-scene-panel">
               <div class="small-title">Stump</div>
               <img src="assets/images/stump.png" class="demo-scene-panel-image">
               <div class="demo-scene-button-row">
@@ -661,8 +661,8 @@
                 <div style="width: 10px;"></div>
                 <div class="demo-scene-button" onclick="openDemo('stump', [['mode', '1']])">High</div>
               </div>
-            </div>
-            <div class="demo-scene-panel">
+            </div-->
+            <!--div class="demo-scene-panel">
               <div class="small-title">Bonsai</div>
               <img src="assets/images/bonsai.png" class="demo-scene-panel-image">
               <div class="demo-scene-button-row">
@@ -684,7 +684,7 @@
               <div class="demo-scene-button-row">
                 <div class="demo-scene-button" onclick="openDemo('vr', [['mode', '0']])">Open</div>
               </div>
-            </div>
+            </div-->
           </div>
         </div>
     </div>

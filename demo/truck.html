@@ -35,12 +35,13 @@
     const mode = parseInt(urlParams.get('mode')) || 0;
 
     const viewer = new GaussianSplats3D.Viewer({
-        'cameraUp': [0, -1, -.17],
-        'initialCameraPosition': [-5, -1, -1],
-        'initialCameraLookAt': [-1.72477, 0.05395, -0.00147],
-        'sphericalHarmonicsDegree': 2
+        'cameraUp': [0, 1, 0],
+        'initialCameraPosition': [0, 0.5, 0],
+        'initialCameraLookAt': [1, 0.5, 0],
+        'sphericalHarmonicsDegree': 2,
+        'webXRMode': GaussianSplats3D.WebXRMode.VR
     });
-    let path = 'assets/data/truck/truck' + (mode ? '_high' : '') + '.ksplat';
+    let path = 'assets/data/splat/Crown-Point-Vista-Inverted' + (mode ? '_high' : '') + '.ply';
     viewer.addSplatScene(path, {
       'progressiveLoad': false
     })
