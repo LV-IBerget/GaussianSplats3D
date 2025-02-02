@@ -11,7 +11,7 @@ import { SplatPartitioner } from './loaders/SplatPartitioner.js';
 import { SplatBufferGenerator } from './loaders/SplatBufferGenerator.js';
 import { Viewer } from './Viewer.js';
 import { DropInViewer } from './DropInViewer.js';
-import { OrbitControls } from './OrbitControls.js';
+import { FirstPersonControls } from 'three/addons/controls/FirstPersonControls.js';
 import { AbortablePromise } from './AbortablePromise.js';
 import { SceneFormat } from './loaders/SceneFormat.js';
 import { WebXRMode } from './webxr/WebXRMode.js';
@@ -34,7 +34,7 @@ export {
     SplatBufferGenerator,
     Viewer,
     DropInViewer,
-    OrbitControls,
+    FirstPersonControls,
     AbortablePromise,
     SceneFormat,
     WebXRMode,

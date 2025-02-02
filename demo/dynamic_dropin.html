@@ -77,7 +77,7 @@
     }
 
     function setupControls(camera, renderer) {
-      const controls = new GaussianSplats3D.OrbitControls(camera, renderer.domElement);
+      const controls = new GaussianSplats3D.FirstPersonControls(camera, renderer.domElement);
       controls.rotateSpeed = 0.5;
       controls.maxPolarAngle = Math.PI * .75;
       controls.minPolarAngle = 0.1;

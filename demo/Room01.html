@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>3D Gaussian Splat Demo - Truck</title>
+  <title>3D Gaussian Splat Demo - Room</title>
   <script type="text/javascript" src="js/util.js"></script>
   <script type="importmap">
     {
@@ -36,12 +36,12 @@
 
     const viewer = new GaussianSplats3D.Viewer({
         'cameraUp': [0, 1, 0],
-        'initialCameraPosition': [0, 0.5, 0],
-        'initialCameraLookAt': [1, 0.5, 0],
+        'initialCameraPosition': [0, -0.5, 0],
+        'initialCameraLookAt': [1, -0.5, 0],
         'sphericalHarmonicsDegree': 2,
         'webXRMode': (mode ? GaussianSplats3D.WebXRMode.None : GaussianSplats3D.WebXRMode.VR) 
     });
-    let path = 'assets/data/splat/Crown-Point-Vista-Inverted' + '.ply';
+    let path = 'assets/data/splat/room' + '.splat';
     viewer.addSplatScene(path, {
       'progressiveLoad': false
     })

@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import { OrbitControls } from './OrbitControls.js';
+import { FirstPersonControls } from 'three/addons/controls/FirstPersonControls.js';
 import { PlyLoader } from './loaders/ply/PlyLoader.js';
 import { SplatLoader } from './loaders/splat/SplatLoader.js';
 import { KSplatLoader } from './loaders/ksplat/KSplatLoader.js';
@@ -63,7 +63,7 @@ export class Viewer {
         this.selfDrivenMode = options.selfDrivenMode && !this.dropInMode;
         this.selfDrivenUpdateFunc = this.selfDrivenUpdate.bind(this);
 
-        // If 'useBuiltInControls' is true, the viewer will create its own instance of OrbitControls and attach to the camera
+        // If 'useBuiltInControls' is true, the viewer will create its own instance of FirstPersonControls and attach to the camera
         if (options.useBuiltInControls === undefined) options.useBuiltInControls = true;
         this.useBuiltInControls = options.useBuiltInControls;
 
@@ -393,13 +393,13 @@ export class Viewer {
     setupControls() {
         if (this.useBuiltInControls && this.webXRMode === WebXRMode.None) {
             if (!this.usingExternalCamera) {
-                this.perspectiveControls = new OrbitControls(this.perspectiveCamera, this.renderer.domElement);
-                this.orthographicControls = new OrbitControls(this.orthographicCamera, this.renderer.domElement);
+                this.perspectiveControls = new FirstPersonControls(this.perspectiveCamera, this.renderer.domElement);
+                this.orthographicControls = new FirstPersonControls(this.orthographicCamera, this.renderer.domElement);
             } else {
                 if (this.camera.isOrthographicCamera) {
-                    this.orthographicControls = new OrbitControls(this.camera, this.renderer.domElement);
+                    this.orthographicControls = new FirstPersonControls(this.camera, this.renderer.domElement);
                 } else {
-                    this.perspectiveControls = new OrbitControls(this.camera, this.renderer.domElement);
+                    this.perspectiveControls = new FirstPersonControls(this.camera, this.renderer.domElement);
                 }
             }
             for (let controls of [this.orthographicControls, this.perspectiveControls,]) {
